@@ -6,6 +6,83 @@ import CreateIcon from "@mui/icons-material/Create";
 import { Button } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 
+const ListContainer = styled.div`
+  background: #f7f7f7;
+  width: 100%;
+  border-bottom: 1px solid #c2c2c2;
+`;
+
+const Links = styled.div`
+  color: black;
+  background: white;
+  border: 1px solid #f7f7f7;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  &:hover {
+    border-left: 1px solid#c2c2c2;
+    border-right: 1px solid #c2c2c2;
+    border-top: 1px solid #c2c2c2;
+    border-bottom: 1px solid white !important;
+    color: rgb(0, 160, 240);
+    background: white;
+  }
+`;
+
+const LinkWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+  width: 56%;
+  @media (max-width: 900px) {
+    margin-left: 0;
+    width: 100%;
+  }
+`;
+
+const Card = styled.div`
+  margin: 45px;
+`;
+
+const GridContainer = styled.div`
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(5, auto);
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(3, auto);
+  }
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(2, auto);
+  }
+  @media (max-width: 1300px) {
+    grid-template-columns: auto;
+  }
+`;
+
+const GridItems = styled.div``;
+
+const KeyItem = styled.div`
+  background: rgb(232, 245, 254);
+  font-weight: 600;
+  padding: 15px;
+`;
+const ValueItem = styled.div`
+  background: rgb(247, 247, 247);
+  padding: 15px;
+`;
+
+const Value = styled.div`
+  background: rgb(247, 247, 247);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 const ListLinks = () => {
   const links = [
     "List of prior Surgeries",
@@ -23,83 +100,6 @@ const ListLinks = () => {
       desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos facilis eius repellat, ex dignissimos pariatur, necessitatibus suscipit, distinctio facere tempora cumque voluptatibus! Sint aperiam, doloremque accusamus repellat pariatur excepturi consequatur?",
     },
   ];
-
-  const ListContainer = styled.div`
-    background: #f7f7f7;
-    width: 100%;
-    border-bottom: 1px solid #c2c2c2;
-  `;
-
-  const Links = styled.div`
-    color: black;
-    background: white;
-    border: 1px solid #f7f7f7;
-    padding: 10px 5px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-weight: 500;
-    &:hover {
-      border-left: 1px solid#c2c2c2;
-      border-right: 1px solid #c2c2c2;
-      border-top: 1px solid #c2c2c2;
-      border-bottom: 1px solid white !important;
-      color: rgb(0, 160, 240);
-      background: white;
-    }
-  `;
-
-  const LinkWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    margin-left: 50px;
-    width: 56%;
-    @media (max-width: 900px) {
-      margin-left: 0;
-      width: 100%;
-    }
-  `;
-
-  const Card = styled.div`
-    margin: 45px;
-  `;
-
-  const GridContainer = styled.div`
-    display: grid;
-    margin-top: 10px;
-    grid-template-columns: repeat(5, auto);
-    @media (max-width: 1500px) {
-      grid-template-columns: repeat(3, auto);
-    }
-    @media (max-width: 1300px) {
-      grid-template-columns: repeat(2, auto);
-    }
-    @media (max-width: 1300px) {
-      grid-template-columns: auto;
-    }
-  `;
-
-  const GridItems = styled.div``;
-
-  const KeyItem = styled.div`
-    background: rgb(232, 245, 254);
-    font-weight: 600;
-    padding: 15px;
-  `;
-  const ValueItem = styled.div`
-    background: rgb(247, 247, 247);
-    padding: 15px;
-  `;
-
-  const Value = styled.div`
-    background: rgb(247, 247, 247);
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  `;
 
   return (
     <>

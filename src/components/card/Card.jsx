@@ -3,113 +3,113 @@ import styled from "styled-components";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import UserImg from "../../images/person-2.jpg";
 
-const Card = () => {
-  const CardContainer = styled.div`
-    background: #f7f7f7;
-    padding: 5px 40px 60px 40px;
-  `;
+const CardContainer = styled.div`
+  background: #f7f7f7;
+  padding: 5px 40px 60px 40px;
+`;
 
-  const TitleBar = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  `;
+const TitleBar = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
-  const Title = styled.div`
-    font-size: 19px;
-    font-weight: 800px;
-  `;
+const Title = styled.div`
+  font-size: 19px;
+  font-weight: 800px;
+`;
 
-  const Time = styled.div`
-    gap: 5px;
-    align-items: center;
-    display: flex;
-  `;
+const Time = styled.div`
+  gap: 5px;
+  align-items: center;
+  display: flex;
+`;
 
-  const PatientDetailsCard = styled.div`
-    display: flex;
-    @media (max-width: 800px) {
-      align-items: center;
-      flex-direction: column;
-    }
-  `;
-
-  const PatientProfile = styled.img`
-    height: 100px;
-    width: 100px;
-    margin-top: 15px;
-    border-radius: 50%;
-    object-fit: cover;
-  `;
-
-  const Name = styled.div`
-    font-size: 20px;
-    margin-left: 35px;
-    margin-top: 15px;
-    font-weight: bold;
-  `;
-
-  const GridContainer = styled.div`
-    display: grid;
-    margin-top: 10px;
-    grid-template-columns: repeat(4, auto);
-    margin-left: 35px;
-    gap: 30px;
-    @media (max-width: 1500px) {
-      grid-template-columns: repeat(3, auto);
-    }
-    @media (max-width: 1300px) {
-      grid-template-columns: repeat(2, auto);
-    }
-    @media (max-width: 1300px) {
-      grid-template-columns: auto;
-    }
-  `;
-
-  const GridItems = styled.div`
-    line-height: 25px;
-  `;
-
-  const GridItem = styled.div`
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr 1fr;
-  `;
-
-  const KeyItem = styled.div`
-    font-weight: 500;
-    color: #545454;
-  `;
-  const ValueItem = styled.div`
-    font-weight: 600;
-    color: #121212;
-  `;
-
-  const GridItemLast = styled.div`
-    display: flex;
+const PatientDetailsCard = styled.div`
+  display: flex;
+  @media (max-width: 800px) {
     align-items: center;
     flex-direction: column;
-  `;
+  }
+`;
 
-  const Clearance = styled.div`
-    color: #545454;
-    font-weight: 500;
-  `;
+const PatientProfile = styled.img`
+  height: 100px;
+  width: 100px;
+  margin-top: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+`;
 
-  const IsClearance = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    width: 80px;
-    background-color: rgb(78, 199, 74);
-    border-radius: 50%;
-    margin-top: 20px;
-    font-weight: 500;
-    color: white;
-    font-size: 20px;
-  `;
+const Name = styled.div`
+  font-size: 20px;
+  margin-left: 35px;
+  margin-top: 15px;
+  font-weight: bold;
+`;
 
+const GridContainer = styled.div`
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(4, auto);
+  margin-left: 35px;
+  gap: 30px;
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(3, auto);
+  }
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(2, auto);
+  }
+  @media (max-width: 1300px) {
+    grid-template-columns: auto;
+  }
+`;
+
+const GridItems = styled.div`
+  line-height: 25px;
+`;
+
+const GridItem = styled.div`
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+`;
+
+const KeyItem = styled.div`
+  font-weight: 500;
+  color: #545454;
+`;
+const ValueItem = styled.div`
+  font-weight: 600;
+  color: #121212;
+`;
+
+const GridItemLast = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const Clearance = styled.div`
+  color: #545454;
+  font-weight: 500;
+`;
+
+const IsClearance = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  background-color: rgb(78, 199, 74);
+  border-radius: 50%;
+  margin-top: 20px;
+  font-weight: 500;
+  color: white;
+  font-size: 20px;
+`;
+
+const Card = () => {
   return (
     <CardContainer>
       <TitleBar>
