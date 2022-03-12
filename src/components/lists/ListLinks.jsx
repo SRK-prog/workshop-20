@@ -39,13 +39,15 @@ const LinkWrapper = styled.div`
   margin-left: 50px;
   width: 56%;
   @media (max-width: 900px) {
-    margin-left: 0;
-    width: 100%;
+    display: none;
   }
 `;
 
 const Card = styled.div`
   margin: 45px;
+  @media (max-width: 800px) {
+    margin: 20px;
+  }
 `;
 
 const GridContainer = styled.div`

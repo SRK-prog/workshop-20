@@ -14,12 +14,6 @@ const Container = styled.div`
 
 const FlexWrapper = styled.div`
   width: 100%;
-  // @media (max-width: 1500px) {
-  //   flex: 30;
-  // }
-  // @media (max-width: 1300px) {
-  //   flex: 20;
-  // }
   @media (max-width: 800px) {
     width: 100%;
   }
@@ -31,7 +25,6 @@ const SidebarContainer = styled.div`
   top: 90px;
   background-color: rgb(232, 245, 254);
   padding: 15px;
-  overflow-y: scroll;
   @media (max-width: 760px) {
     display: none;
   }
@@ -57,7 +50,7 @@ const Home = () => {
   };
 
   const Flex9 = {
-    width: "400px",
+    width: "360px",
   };
 
   return (

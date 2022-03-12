@@ -6,10 +6,6 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import SearchIcon from "@mui/icons-material/Search";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import Person1 from "../../images/person-1.jpg";
-import Person2 from "../../images/person-2.jpg";
-import Person3 from "../../images/person-4.jpg";
-import Person4 from "../../images/person.jpg";
 
 const Avatar = styled.img`
   height: 60px;
@@ -57,25 +53,25 @@ const Sidebar = ({ handleTogggle, click }) => {
     {
       Name: "Sara Smith",
       date: "Jan 9, 2020",
-      Photo: Person2,
+      Photo: "/images/person-2.jpg",
       cleared: "#3acf61",
     },
     {
       Name: "James Johnson",
       date: "No Clearance",
-      Photo: Person1,
+      Photo: "/images/person-1.jpg",
       cleared: "red",
     },
     {
       Name: "Patrice Page",
       date: "Aug 10, 2019",
-      Photo: Person3,
+      Photo: "/images/person-4.jpg",
       cleared: "#3acf61",
     },
     {
       Name: "Derek Diamon",
       date: "Nov 18, 2020",
-      Photo: Person4,
+      Photo: "/images/person.jpg",
       cleared: "#3acf61",
     },
   ];

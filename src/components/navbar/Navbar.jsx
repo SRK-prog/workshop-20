@@ -12,8 +12,6 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import styled from "styled-components";
-import Person from "../../images/person.jpg";
-import Logo from "../../images/logo.png";
 
 const LinkButton = styled.button`
   font-size: 14px;
@@ -80,7 +78,7 @@ const Navbar = () => {
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-              <img src={Logo} alt="Logo" />
+              <img src="/images/logo.png" alt="Logo" />
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -128,7 +126,7 @@ const Navbar = () => {
               component="div"
               sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
             >
-              <img src={Logo} alt="Logo" />
+              <img src="/images/logo.png" alt="Logo" />
             </Typography>
             <Box
               style={{ margin: "0 0 0 70px" }}
@@ -148,7 +146,7 @@ const Navbar = () => {
               <NotificationsIcon style={NotifyIcon} />
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src={Person} />
+                  <Avatar alt="Remy Sharp" src="/images/person.jpg" />
                 </IconButton>
               </Tooltip>
               <Menu
