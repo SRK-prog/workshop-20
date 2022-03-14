@@ -62,6 +62,7 @@ const Isclear = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 `;
 
 const GridContainer = styled.div`
