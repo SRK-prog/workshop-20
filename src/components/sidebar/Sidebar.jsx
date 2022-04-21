@@ -17,16 +17,13 @@ const Avatar = styled.img`
 
 const Title = styled.div`
   width: 100%;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
 `;
 
 const SearchBar = styled.input`
   border: none;
-  width: 93%;
-  padding: 10px;
-  margin: 15px 0;
-  border-radius: 5px;
+  width: 100%;
   &:focus {
     border: none;
     outline: none;
@@ -38,6 +35,7 @@ const Dot = styled.span`
   width: 14px;
   border-radius: 50%;
   margin-right: 15px;
+  background-color: ${({ Color }) => Color};
 `;
 
 const TitleWrapper = styled.div`
@@ -45,7 +43,13 @@ const TitleWrapper = styled.div`
 `;
 
 const SearchWrap = styled.div`
-  position: relative;
+  padding-inline: 10px;
+  margin: 15px 0;
+  border-radius: 5px;
+  height: 40px;
+  display: flex;
+  background-color: white;
+  align-items: center;
 `;
 
 const Sidebar = ({ handleTogggle, click }) => {
@@ -54,40 +58,27 @@ const Sidebar = ({ handleTogggle, click }) => {
       Name: "Sara Smith",
       date: "Jan 9, 2020",
       Photo: "/images/person-2.jpg",
-      cleared: "#3acf61",
+      cleared: true,
     },
     {
       Name: "James Johnson",
       date: "No Clearance",
       Photo: "/images/person-1.jpg",
-      cleared: "red",
+      cleared: false,
     },
     {
       Name: "Patrice Page",
       date: "Aug 10, 2019",
       Photo: "/images/person-4.jpg",
-      cleared: "#3acf61",
+      cleared: true,
     },
     {
       Name: "Derek Diamon",
       date: "Nov 18, 2020",
       Photo: "/images/person.jpg",
-      cleared: "#3acf61",
+      cleared: true,
     },
   ];
-
-  const arrowStyle = {
-    position: "absolute",
-    top: "0",
-    color: "rgb(0, 160, 240)",
-    background: "white",
-    height: "20px",
-    padding: "5px",
-    width: "20px",
-    right: "-15px",
-    borderRadius: "50%",
-    zIndex: "9999",
-  };
 
   const m10 = {
     marginBottom: "15px",
@@ -99,42 +90,27 @@ const Sidebar = ({ handleTogggle, click }) => {
         {click && <Title>Patients</Title>}
         <ArrowBackIosNewIcon
           onClick={() => handleTogggle()}
-          style={arrowStyle}
+          className={`arrow-style ${!click && "arrow-rotate"}`}
         />
       </TitleWrapper>
       {click && (
         <SearchWrap>
-          <SearchBar placeholder="Search patients" />
-          <SearchIcon
-            style={{
-              position: "absolute",
-              zIndex: "99",
-              top: "20px",
-              right: "7px",
-              color: "#777877",
-            }}
-          />
+          <SearchBar placeholder="Search Patient" />
+          <SearchIcon className="search-icon" />
         </SearchWrap>
       )}
       <List
-        style={{ background: "rgb(232, 245, 254)" }}
-        sx={{ width: "100%", maxWidth: 360, bgcolor: "white" }}
+        sx={{ width: "100%", maxWidth: 360, bgcolor: "rgb(232, 245, 254)" }}
       >
         {PatientsData.map((item, i) => (
           <span key={i}>
             {click ? (
-              <ListItem
-                style={{
-                  background: "white",
-                  marginBottom: "15px",
-                  borderRadius: "5px",
-                }}
-              >
+              <ListItem className="list-items">
                 <ListItemAvatar>
                   <Avatar src={item.Photo} alt="person" />
                 </ListItemAvatar>
                 <ListItemText primary={item.Name} secondary={item.date} />
-                <Dot style={{ background: `${item.cleared}` }}></Dot>
+                <Dot Color={item.cleared ? "#3acf61" : "red"}></Dot>
               </ListItem>
             ) : (
               <Avatar style={!click ? m10 : {}} src={item.Photo} alt="person" />

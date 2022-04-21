@@ -3,18 +3,26 @@ import styled from "styled-components";
 const DataPatientCon = styled.div`
   position: relative;
   margin-top: 30px;
+  width: 100%;
 `;
 
 const PatKey = styled.span`
   line-height: 25px;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 500;
+  color: #626262;
+  @media (max-width: 760px) {
+    font-size: 14px;
+  }
 `;
 
 const PatValue = styled.span`
   line-height: 25px;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 600;
+  @media (max-width: 760px) {
+    font-size: 14px;
+  }
 `;
 
 const Name = styled.div`
@@ -76,12 +84,12 @@ const GridContainer = styled.div`
     grid-template-columns: repeat(2, auto);
   }
   @media (max-width: 1200px) {
-    grid-template-columns: repeat(1, auto);
+    display: flex;
+    flex-direction: column;
   }
 `;
 const GridItem = styled.div`
   display: flex;
-  justify-content: center;
   align-items: right;
   @media (max-width: 1550px) {
     display: grid;
@@ -91,7 +99,9 @@ const GridItem = styled.div`
 
 const GridItemw = styled.div`
   display: flex;
-  justify-content: center;
+  @media (max-width: 1200px) {
+    justify-content: center;
+  }
 `;
 
 const Cards = () => {
@@ -136,7 +146,7 @@ const Cards = () => {
             <PatKey>Anesthesiologist Phone:</PatKey>
           </PatKeyInfo>
           <Patinfo>
-            <PatValue>Dr.Christina Hardaway</PatValue>
+            <PatValue>Dr.Christina</PatValue>
             <PatValue>Christina@mail.com</PatValue>
             <PatValue>456-184-1549</PatValue>
           </Patinfo>

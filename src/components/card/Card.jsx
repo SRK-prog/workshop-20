@@ -20,6 +20,9 @@ const TitleBar = styled.div`
 const Title = styled.div`
   font-size: 19px;
   font-weight: 800px;
+  @media (max-width: 640px) {
+    font-size: 16px;
+  }
 `;
 
 const Time = styled.div`
@@ -27,12 +30,16 @@ const Time = styled.div`
   gap: 5px;
   align-items: center;
   display: flex;
+  @media (max-width: 640px) {
+    font-size: 12px;
+  }
 `;
 
 const Contain = styled.div`
   display: flex;
   gap: 30px;
   margin-top: 30px;
+  width: 100%;
   @media (max-width: 1380px) {
     flex-direction: column;
   }
@@ -42,8 +49,17 @@ const ProfileImg = styled.img`
   height: 100px;
   width: 100px;
   border-radius: 50%;
+  object-fit: cover;
   @media (max-width: 800px) {
     margin: auto;
+  }
+`;
+
+const TimeTag = styled.p`
+  color: #626363;
+  font-size: 14px;
+  @media (max-width: 640px) {
+    font-size: 12px;
   }
 `;
 
@@ -53,7 +69,7 @@ const Card = () => {
       <TitleBar>
         <Title>Patient Information</Title>
         <Time>
-          <p style={{ color: "#626363", fontSize: "14px" }}>Last seen:</p>
+          <TimeTag>Last seen:</TimeTag>
           10:25 AM, today
           <MoreHorizIcon />
         </Time>

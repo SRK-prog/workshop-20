@@ -24,7 +24,7 @@ const SidebarContainer = styled.div`
   position: sticky;
   top: 90px;
   background-color: rgb(232, 245, 254);
-  padding: 15px;
+  padding: 25px 15px 15px 15px;
   @media (max-width: 760px) {
     display: none;
   }

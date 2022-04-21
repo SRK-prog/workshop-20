@@ -13,6 +13,10 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import styled from "styled-components";
 
+const Logo = styled.img`
+  margin-left: 50px;
+`
+
 const LinkButton = styled.button`
   font-size: 14px;
   outline: none;
@@ -27,6 +31,24 @@ const LinkButton = styled.button`
     background-color: rgb(0, 160, 240);
     color: white;
   }
+`;
+
+const NotificationWrapper = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Badge = styled.div`
+  position: absolute;
+  z-index: 1000;
+  top: 5px;
+  right: 18px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: red;
 `;
 
 const pages = ["PATIENTS", "CALENDER", "USERS", "BILLING"];
@@ -49,12 +71,6 @@ const Navbar = () => {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
-  };
-
-  const NotifyIcon = {
-    marginRight: "15px",
-    fontSize: "30px",
-    color: "black",
   };
 
   return (
@@ -126,7 +142,7 @@ const Navbar = () => {
               component="div"
               sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
             >
-              <img src="/images/logo.png" alt="Logo" />
+              <Logo src="/images/logo.png" alt="Logo" />
             </Typography>
             <Box
               style={{ margin: "0 0 0 70px" }}
@@ -143,7 +159,10 @@ const Navbar = () => {
               style={{ display: "flex", alignItems: "center" }}
               sx={{ flexGrow: 0 }}
             >
-              <NotificationsIcon style={NotifyIcon} />
+              <NotificationWrapper>
+                <Badge></Badge>
+                <NotificationsIcon className="notify-icon" />
+              </NotificationWrapper>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar alt="Remy Sharp" src="/images/person.jpg" />
