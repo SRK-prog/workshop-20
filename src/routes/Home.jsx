@@ -25,6 +25,7 @@ const SidebarContainer = styled.div`
   top: 90px;
   background-color: rgb(232, 245, 254);
   padding: 25px 15px 15px 15px;
+  width: ${({ sidebarWidth }) => sidebarWidth};
   @media (max-width: 760px) {
     display: none;
   }
@@ -35,27 +36,16 @@ const Home = () => {
   const [toggle, setToggle] = useState(true);
 
   useEffect(() => {
-    const Toggle = () => {
-      setToggle(At800);
-    };
-    Toggle();
+    setToggle(At800);
   }, [At800]);
 
   const handleTogggle = () => {
     setToggle(!toggle);
   };
 
-  const Flex1 = {
-    width: "70px",
-  };
-
-  const Flex9 = {
-    width: "360px",
-  };
-
   return (
     <Container>
-      <SidebarContainer style={toggle ? Flex9 : Flex1}>
+      <SidebarContainer sidebarWidth={toggle ? "360px" : "70px"}>
         <Sidebar click={toggle} handleTogggle={handleTogggle} />
       </SidebarContainer>
       <FlexWrapper>

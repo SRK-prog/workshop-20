@@ -40,6 +40,9 @@ const PatKeyInfo = styled.div`
   color: darkslategrey;
   line-height: 25px;
   font-weight: bolder;
+  @media (max-width: 1200px) {
+    width: ${(props) => props.InfowidSM};
+  }
 `;
 
 const Patinfo = styled.div`
@@ -140,7 +143,7 @@ const Cards = () => {
           </Patinfo>
         </GridItem>
         <GridItem>
-          <PatKeyInfo Infowid="200px">
+          <PatKeyInfo Infowid="200px" InfowidSM="auto">
             <PatKey>Anesthesiologist:</PatKey>
             <PatKey>Anesthesiologist Email:</PatKey>
             <PatKey>Anesthesiologist Phone:</PatKey>
